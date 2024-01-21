@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
+    <Authors>TroyWalshProf</Authors>
+    <Description>Tools for creating aXe HTML</Description>
+    <PackageProjectUrl>https://github.com/TroyWalshProf/SeleniumAxeHtmlDotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/TroyWalshProf/SeleniumAxeHtmlDotnet</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright 2024</Copyright>
+    <PackageTags>selenium accessibility axe ada webdriver</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+    <!-- override this in official/release build/pack/publish commands with -p:Version=x.y.z -->
+    <VersionPrefix>0.0.0</VersionPrefix>
+    <VersionSuffix>development</VersionSuffix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.57" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.16.2" />
+	<PackageReference Include="Deque.AxeCore.Selenium" Version="4.8.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\htmlReporterElements.js" />
+    <EmbeddedResource Include="Resources\htmlReporter.css" />    
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(TargetFramework)' != 'netstandard2.0' and '$(TargetFramework)' != 'netstandard2.1'   ">
+      <ItemGroup>
+        <Reference Include="System.Web" />
+      </ItemGroup>
+    </When>
+  </Choose>
+  
+</Project>

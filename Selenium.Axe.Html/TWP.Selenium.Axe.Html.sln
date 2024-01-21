@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F7BBEE18-ADA5-4395-9CC2-E374F9330DD6}") = "TWP.Selenium.Axe.Html", "TWP.Selenium.Axe.Html\TWP.Selenium.Axe.Html.csproj", "{8B9964D9-A251-4808-99DA-CEFC3437C7E5}"
+EndProject
+Project("{F7BBEE18-ADA5-4395-9CC2-E374F9330DD6}") = "TWP.Selenium.Axe.Html.Test", "TWP.Selenium.Axe.Html.Test\TWP.Selenium.Axe.Html.Test.csproj", "{8AD5B4B7-9F98-493A-8ADA-4E13FF2430FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B9964D9-A251-4808-99DA-CEFC3437C7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B9964D9-A251-4808-99DA-CEFC3437C7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B9964D9-A251-4808-99DA-CEFC3437C7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B9964D9-A251-4808-99DA-CEFC3437C7E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD5B4B7-9F98-493A-8ADA-4E13FF2430FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD5B4B7-9F98-493A-8ADA-4E13FF2430FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD5B4B7-9F98-493A-8ADA-4E13FF2430FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD5B4B7-9F98-493A-8ADA-4E13FF2430FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46E1E96F-E823-4E84-BC1F-BD1607429EAC}
+	EndGlobalSection
+EndGlobal
