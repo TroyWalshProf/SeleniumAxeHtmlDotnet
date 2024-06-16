@@ -11,7 +11,7 @@ using System.Collections.Concurrent;
 using System.IO;
 using System.Reflection;
 using System.Threading;
-using TWP.Selenium.Axe.Html;
+
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
@@ -27,7 +27,6 @@ namespace TWP.Selenium.Axe.Html.Test
         private readonly ConcurrentDictionary<string, IWebDriver> localDriver = new ConcurrentDictionary<string, IWebDriver>();
         private readonly ConcurrentDictionary<string, WebDriverWait> localWaitDriver = new ConcurrentDictionary<string, WebDriverWait>();
         private static string ChromeDriverPath = null;
-        private static string FirefoxDriverPath = null;
 
         public IWebDriver WebDriver
         {
@@ -64,8 +63,15 @@ namespace TWP.Selenium.Axe.Html.Test
         [TearDown]
         public virtual void TearDown()
         {
-            WebDriver?.Quit();
-            WebDriver?.Dispose();
+            try
+            {
+                WebDriver?.Close();
+            }
+            finally
+            {
+                WebDriver?.Quit();
+            }
+
         }
 
         [Test]
